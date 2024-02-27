@@ -3,8 +3,8 @@ import telebot
 import time
 
 # Configurações do bot
-telegram_token = "6525187672:AAHbBSdY2aRqoc1zuaQ7O362f6nkag_IP7A"  # TOKEN DO BOT
-chat_id = "-1001963117183"  # ID BOT
+telegram_token = "6338589381:AAH6kSSZ2-laZnjkrtVsO2ql6Ya4T_5UT3o"  # TOKEN DO BOT
+chat_id = "-1002042980911"  # ID BOT
 
 # Configurações do jogo
 API_URL = "https://casino.betfair.com/api/tables-details"
