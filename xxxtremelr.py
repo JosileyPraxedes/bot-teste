@@ -95,19 +95,19 @@ def verificar_alerta(data):
         if sinal == True:
             correcao(numeros, colunas, indicacao1, indicacao2)
         else:
-            if colunas[:3] == [1, 1, 1]:
+            if colunas[:2] == [1, 1]:
                 sinal = True
                 indicacao1 = 2
                 indicacao2 = 3
                 enviar_sinal(indicacao1, indicacao2, ultimo_numero)
                 print("SINAL ENVIADO")
-            if colunas[:3] == [2, 2, 2]:
+            if colunas[:2] == [2, 2]:
                 sinal = True
                 indicacao1 = 1
                 indicacao2 = 3
                 enviar_sinal(indicacao1, indicacao2, ultimo_numero)
                 print("SINAL ENVIADO")
-            if colunas[:3] == [3, 3, 3]:
+            if colunas[:2] == [3, 3]:
                 sinal = True
                 indicacao1 = 1
                 indicacao2 = 2
