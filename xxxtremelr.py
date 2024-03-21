@@ -13,7 +13,7 @@ MARTINGALE_STEPS = 0
 # Inicialização do bot
 bot = telebot.TeleBot(telegram_token)
 # Envia mensagem de início do robô
-# bot.send_message(chat_id=chat_id, text='🔥 ATENÇÃO VAMOS INICIAR! 🔥', parse_mode="html")
+bot.send_message(chat_id=chat_id, text='🔥 ATENÇÃO VAMOS INICIAR! 🔥', parse_mode="html")
 print("💰 ROLETA XXXtreme Lightning Roulette")
 
 # Variáveis de controle
