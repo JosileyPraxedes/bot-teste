@@ -8,7 +8,7 @@ chat_id = "-1002042980911"  # ID BOT
 
 # Configurações do jogo
 API_URL = "https://casino.betfair.com/api/tables-details"
-MARTINGALE_STEPS = 0
+MARTINGALE_STEPS = 1
 
 # Inicialização do bot
 bot = telebot.TeleBot(telegram_token)
@@ -134,12 +134,12 @@ def enviar_sinal(indicacao1, indicacao2, ultimo_numero):
 🎯 Entrada confirmada 🎯
 
 🔥 Entrar na {indicacao1}º e {indicacao2}ª Coluna | Cobrir o 0️⃣
-🎰 <a href='https://kerobets.com/?r=mfjuogry'>XXXtreme Lightning Roulette</a>
+🎰 <a href='https://diskbets.com/casino/evolution/xxxtreme-lightning-roulette?r=qmbzeqvj'>XXXtreme Lightning Roulette</a>
 ➡️ ENTRADA ÚNICA S/G
 
 🧨 Último número: {ultimo_numero}
 
-🤑 <a href='https://kerobets.com/?r=mfjuogry'>CADASTRE-SE AQUI</a>
+🤑 <a href='https://diskbets.com/?r=qmbzeqvj'>CADASTRE-SE AQUI</a>
 """
 
     # Enviar mensagem e armazenar o ID da mensagem
