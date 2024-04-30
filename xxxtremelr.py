@@ -41,7 +41,7 @@ def obter_resultado():
     data = response.json()
     data = data["gameTables"]
     for x in data:
-        if x["gameTableId"] == "XxxtremeLigh0001":  # mudar roleta
+        if x["gameTableId"] == "rz7zgbhugevzgrul":  # mudar roleta
 
             try:
                 data = x["lastNumbers"]
