@@ -35,23 +35,27 @@ check_dados = []
 # Função para obter o resultado atual do jogo
 def obter_resultado():
     headers = {"cookie": "vid=210bec56-62f7-4616-939d-077cf4ff0f25"}
-    response = requests.get(API_URL, headers=headers)
-    if response.status_code != 200:
-        return []
-    data = response.json()
-    data = data["gameTables"]
-    for x in data:
-        if x["gameTableId"] == "rz7zgbhugevzgrul":  # mudar roleta
-
-            try:
-                data = x["lastNumbers"]
-                print(x["lastNumbers"])
-                time.sleep(0)
-
-                return data
-            except KeyError:
-                continue
-
+    try:
+        response = requests.get(API_URL, headers=headers)
+        if response.status_code != 200:
+            return []
+        data = response.json()
+        data = data["gameTables"]
+        for x in data:
+            if x["gameTableId"] == "rz7zgbhugevzgrul":  # mudar roleta
+    
+                try:
+                    data = x["lastNumbers"]
+                    print(x["lastNumbers"])
+                    time.sleep(0)
+    
+                    return data
+                except KeyError:
+                    continue
+    except requests.exeptions.ConnectionError:
+        print("erro de conexão. Tentando reconectar...")
+        time.sleep(5) # Tentar reconectar após 5 segundos.
+        return obter_resultado() # Chamar a função novamente para tentar obter os dados novamente.
 
 def caracteristicas(data):
     if data is None:
