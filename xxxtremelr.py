@@ -55,8 +55,6 @@ def obter_resultado():
         time.sleep(5)  # Tentar reconectar após 5 segundos
         return obter_resultado()  # Chamar a função novamente para tentar obter os dados novamente
 
-    return []
-
 def caracteristicas(data):
     if data is None:
         return []
