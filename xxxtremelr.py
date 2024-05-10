@@ -43,19 +43,19 @@ def obter_resultado():
         data = data["gameTables"]
         for x in data:
             if x["gameTableId"] == "rz7zgbhugevzgrul":  # mudar roleta
-    
                 try:
                     data = x["lastNumbers"]
                     print(x["lastNumbers"])
                     time.sleep(0)
-    
                     return data
                 except KeyError:
                     continue
-    except requests.exeptions.ConnectionError:
-        print("erro de conexão. Tentando reconectar...")
-        time.sleep(5) # Tentar reconectar após 5 segundos.
-        return obter_resultado() # Chamar a função novamente para tentar obter os dados novamente.
+    except requests.exceptions.ConnectionError:
+        print("Erro de conexão. Tentando reconectar...")
+        time.sleep(5)  # Tentar reconectar após 5 segundos
+        return obter_resultado()  # Chamar a função novamente para tentar obter os dados novamente
+
+    return []
 
 def caracteristicas(data):
     if data is None:
